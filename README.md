@@ -1,10 +1,10 @@
 # DARZEE - Junior Frontend Developer Interview Project
 
-A modern, responsive portfolio website built as a demonstration project for Junior Frontend Developer role interviews. This project showcases my ability to work with React, Vite, and Tailwind CSS while following modern web development best practices.
+A modern, responsive portfolio website built as a demonstration project for Junior Frontend Developer role interview. This project showcases my ability to work with React, Vite, and Tailwind CSS while following modern web development best practices.
 
 ## 🚀 Live Demo
 
-Visit the live site: [iamdarzee.com](https://iamdarzee.com)
+Visit the live site: [Live](https://vite-project-u28k.vercel.app/)
 
 ## 📋 Features
 
@@ -17,7 +17,7 @@ Visit the live site: [iamdarzee.com](https://iamdarzee.com)
 
 ## 🛠️ Technologies Used
 
-- **React 18** - Component-based UI library
+- **React 19** - Component-based UI library
 - **Vite** - Fast build tool and development server
 - **Tailwind CSS** - Utility-first CSS framework
 - **JavaScript ES6+** - Modern JavaScript features
@@ -25,8 +25,7 @@ Visit the live site: [iamdarzee.com](https://iamdarzee.com)
 
 ## 📱 Pages
 
-- **Landing Page** - Hero section with skills overview
-- **Home** - Detailed portfolio showcase
+- **Landing Page/Home** - Hero section with skills overview and Detailed portfolio showcase
 - **About** - My journey and technical skills
 - **Contact** - Get in touch form and information
 
@@ -51,15 +50,14 @@ Visit the live site: [iamdarzee.com](https://iamdarzee.com)
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v16 or higher)
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/darzee-portfolio.git
-cd darzee-portfolio
+git clone https://github.com/iamdarzee/vite-project.git
+cd vite-project
 ```
 
 2. Install dependencies
@@ -80,17 +78,6 @@ npm run dev
 
 5. Open your browser and visit `http://localhost:5173`
 
-### Build for Production
-
-```bash
-npm run build
-```
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
 
 ## 📁 Project Structure
 
@@ -125,8 +112,8 @@ src/
 ## 📞 Contact
 
 - **Website**: [iamdarzee.com](https://iamdarzee.com)
-- **Email**: hello@iamdarzee.com
-- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **Email**: contact@iamdarzee.com
+- **GitHub**: [@iamdarzee](https://github.com/iamdarzee)
 
 ## 💼 Interview Project Goals
 
@@ -163,14 +150,5 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Note**: This project showcases my readiness for a Junior Frontend Developer role, demonstrating both technical skills and eagerness to learn and grow within a development team.
 
-## 🔄 Recent Updates
 
-- ✅ Added dark/light mode toggle
-- ✅ Implemented responsive design
-- ✅ Added smooth animations and transitions
-- ✅ Optimized for performance
-- ✅ Enhanced accessibility features
-
----
-
-*Built with ❤️ by DARZEE - Junior Frontend Developer*
+*Built with ❤️ by DARZEE For Junior Frontend Developer Role *
