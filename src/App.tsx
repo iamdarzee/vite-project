@@ -7,6 +7,7 @@ import './index.css'
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
   const [darkMode, setDarkMode] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     if (darkMode) {
@@ -33,7 +34,9 @@ function App() {
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               DARZEE
             </div>
-            <div className="flex items-center space-x-6">
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-6">
               <button
                 onClick={() => setDarkMode(!darkMode)}
                 className="text-2xl p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
@@ -78,7 +81,74 @@ function App() {
                   Contact
                 </button>
               </li>
-            </ul>
+              </ul>
+            </div>
+            
+            {/* Mobile Navigation */}
+            <div className="md:hidden flex items-center space-x-4">
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className="text-2xl p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
+                aria-label="Toggle dark mode"
+              >
+                {darkMode ? '🌞' : '🌛'}
+              </button>
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                aria-label="Toggle menu"
+              >
+                <div className="w-6 h-6 flex flex-col justify-center items-center">
+                  <span className={`block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
+                  <span className={`block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 mt-1 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                  <span className={`block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 mt-1 ${mobileMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
+                </div>
+              </button>
+            </div>
+          </div>
+          
+          {/* Mobile Menu */}
+          <div className={`md:hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm">
+              <button
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-all ${
+                  currentPage === 'home'
+                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700'
+                }`}
+                onClick={() => {
+                  setCurrentPage('home')
+                  setMobileMenuOpen(false)
+                }}
+              >
+                Home
+              </button>
+              <button
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-all ${
+                  currentPage === 'about'
+                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700'
+                }`}
+                onClick={() => {
+                  setCurrentPage('about')
+                  setMobileMenuOpen(false)
+                }}
+              >
+                About
+              </button>
+              <button
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-all ${
+                  currentPage === 'contact'
+                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700'
+                }`}
+                onClick={() => {
+                  setCurrentPage('contact')
+                  setMobileMenuOpen(false)
+                }}
+              >
+                Contact
+              </button>
             </div>
           </div>
         </div>
